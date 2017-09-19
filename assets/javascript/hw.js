@@ -10,7 +10,8 @@ $(document).ready(function() {
         $("#gif-buttons").append(buttonTag);
     };
 
-    $("#add-gif").on("click", function() {
+    $("#add-gif").on("click", function(event) {
+        event.preventDefault();
         gifInput = $("#gif-input").val();
         if (gifInput !== "") {
             var buttonTag = $("<button>");
